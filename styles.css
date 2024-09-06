@@ -1,0 +1,694 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.player {
+  background-color: #1db954;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.player-header h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.player-controls button:hover {
+  background-color: #1db954;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+#album-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.track-info h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.track-info p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.progress-bar {
+  margin: 15px 0;
+}
+#musicPlayerWindow {
+  width: 300px;
+  height: 400px;
+}
+
+#progress {
+  width: 100%;
+}
+
+.volume-control {
+  margin: 15px 0;
+}
+
+#volume {
+  width: 100%;
+}
+
+
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+.taskbar-item {
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.taskbar-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.window {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  color: black;
+  resize: both;
+  overflow: auto;
+}
+
+.window-header {
+  background-color: #0078D7;
+  color: white;
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-content {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.draggable {
+  cursor: move;
+}
+
+#desktop-icons {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.desktop-icon {
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 60px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+.desktop-icon span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.desktop-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.context-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+.context-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.context-menu ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.context-menu ul li:hover {
+  background-color: #0078D7;
+  color: white;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+}
+
+#settings label {
+  margin-bottom: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.taskbar-item {
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.taskbar-item:hover {
+  background-color: #444;
+}
+
+#desktop-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.desktop-icon {
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.window {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border: 2px solid #666;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
+.window-header {
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: move;
+}
+
+.window-content {
+  padding: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.context-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
+}
+
+.context-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.context-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: #eee;
+}
+
+/* Animations for opening and closing windows */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.8); }
+}
+
+.window.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.window.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+#musicPlayerWindow {
+  width: 350px;
+  height: auto;
+  min-height: 400px;
+}
+
+.player {
+  background-color: #1db954;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+}
+
+.player-header h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  transition: background 0.3s;
+}
+
+.player-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+#album-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.track-info h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.track-info p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.progress-bar {
+  margin: 15px 0;
+}
+
+#progress {
+  width: 100%;
+}
+
+.volume-control {
+  margin: 15px 0;
+}
+
+#volume {
+  width: 100%;
+}
+#clock-container {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+#clock {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#notification-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#notification-window {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  display: none;
+  z-index: 1000;
+}
+
+#notification-window h3 {
+  margin: 10px;
+  font-size: 18px;
+}
+
+#notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px 10px 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#notification-list li {
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+#notification-list li:last-child {
+  border-bottom: none;
+}
+#clock-container {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  justify-content: flex-end; /* Новий рядок, щоб розміщувати елементи праворуч */
+}
+
+#clock {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#notification-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#notification-window {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  display: none;
+  z-index: 1000;
+}
+
+#notification-window h3 {
+  margin: 10px;
+  font-size: 18px;
+}
+
+#notification-window button {
+  margin: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#notification-window button:hover {
+  background-color: #d32f2f;
+}
+
+#notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px 10px 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#notification-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: black; /* Чорний текст */
+}
+
+#notification-list li:last-child {
+  border-bottom: none;
+}
+
+#notification-list li button {
+  float: right;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#notification-list li button:hover {
+  color: darkred;
+}
+#chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+#chatbot-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px; /* Зміна напрямку, щоб chatbot іконка була зліва від годинника */
+  cursor: pointer;
+}
+
+#chatbot-window {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  z-index: 1001;
+}
+
+#chatbot-window h3 {
+  margin: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+#chatbot-messages {
+  padding: 10px;
+  height: 150px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+  color: black;
+}
+
+#chatbot-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+#chatbot-input-container {
+  display: flex;
+  align-items: center;
+}
+
+#chatbot-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  box-sizing: border-box;
+}
+
+#voice-button {
+  padding: 10px;
+  background-color: #0078D7;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* Dynamic cursor size adjustment */
+body {
+  cursor: var(--cursor-style, default);
+}
+/* Light and Dark Theme */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#animeGirl {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 150px;
+  transition: transform 0.5s ease;
+}
+
+body.light-theme #animeGirl img {
+  transform: translateY(0); /* Денна позиція */
+}
+
+body.dark-theme #animeGirl img {
+  transform: translateY(-20px); /* Нічна позиція (підстрибує трохи) */
+}
+
+/* Theme for taskbar and windows */
+#taskbar.light-theme {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+#taskbar.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+/* Енергоефективний режим */
+body.power-saving {
+  transition: none;
+  background-color: #000; /* Темний фон для збереження енергії */
+  color: #777; /* Зменшена яскравість тексту */
+}
+
+body.power-saving img, body.power-saving .window {
+  filter: brightness(0.6); /* Зменшення яскравості зображень і вікон */
+}
+
+.window.power-saving {
+  animation: none; /* Вимикаємо анімації для вікон */
+}
+
+/* Приклад: вимкнення анімації у вікнах */
+.window-header.power-saving {
+  background-color: #333; /* Тьмяний фон для енергоефективного режиму */
+}
+/* Ігровий режим — мінімізація непотрібних елементів */
+.hidden {
+  display: none;
+}
+
+.gaming-mode .taskbar,
+.gaming-mode .desktop-icon {
+  display: none;
+}
+
+.gaming-mode .window {
+  box-shadow: none;
+  transition: none;
+}
+
+.gaming-mode .progress-bar, .gaming-mode .volume-control {
+  display: none;
+}
