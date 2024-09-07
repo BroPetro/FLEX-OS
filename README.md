@@ -41,7 +41,12 @@
 
 Ми відкриті до ваших пропозицій і покращень! Ви можете зробити fork цього репозиторію, додати свої зміни і створити pull request.
 
-## Проєкт на GITHUB
-Проєкт силка: ```bash
-    https://github.com/BroPetro/FLEX-OS/projects?query=is%3Aopen
-    ```
+## GITHUB
+Проєкт силка:
+```bash
+   https://github.com/users/BroPetro/projects/6/views/1
+```
+Wiki на GITHUB
+```bash
+   https://github.com/BroPetro/FLEX-OS/wiki
+```
